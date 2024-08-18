@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".home.activity.HomeActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivHeader"
+            android:layout_width="match_parent"
+            android:layout_marginStart="-5dp"
+            android:layout_marginEnd="-5dp"
+            android:layout_height="130dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/top_header_bg"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDeposit"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:paddingStart="@dimen/dimen_14"
+                android:paddingEnd="@dimen/dimen_14"
+                android:textColor="@color/white"
+                app:fontFamily="@font/lato"
+                android:text="@string/deposit"
+                android:background="@drawable/selected_tab_button_bg"
+                android:textAllCaps="false"
+                android:textSize="14sp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnWithdrawal"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:paddingStart="@dimen/dimen_14"
+                android:paddingEnd="@dimen/dimen_14"
+                android:textColor="@color/white"
+                app:fontFamily="@font/lato"
+                android:text="@string/withdrawal"
+                android:background="@drawable/selected_tab_button_bg"
+                android:textAllCaps="false"
+                android:textSize="14sp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivLogout"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/log_out"
+                android:paddingTop="@dimen/padding_10"
+                android:paddingBottom="@dimen/padding_10"
+                android:foreground="?attr/selectableItemBackground"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </FrameLayout>
+
+    <!--<androidx.fragment.app.FragmentContainerView
+        android:id="@+id/activity_main_nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:defaultNavHost="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/main_nav_graph" />-->
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerHome"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

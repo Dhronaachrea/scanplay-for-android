@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/brownishAppGrey"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/fl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/ivFlash"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/baseline_flash_off_24"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_10"
+                android:layout_gravity="center"
+                android:background="@drawable/scanner_corner_frame">
+
+                <androidx.camera.view.PreviewView
+                    android:id="@+id/preview_view"
+                    android:layout_width="280dp"
+                    android:layout_height="280dp"
+                    android:layout_gravity="center"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </FrameLayout>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_48"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnApprove"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/shamrockGreen"
+                android:text="@string/approve"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_20"
+                android:fontFamily="@font/lato"
+                android:visibility="gone"/>
+
+            <ProgressBar
+                android:id="@+id/pbWithdraw"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:indeterminateDrawable="@drawable/progress_withdrawal"
+                android:visibility="gone" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

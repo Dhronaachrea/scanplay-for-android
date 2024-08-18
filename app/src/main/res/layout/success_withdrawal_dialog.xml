@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/padding_24"
+        android:background="@color/dialogBgColor">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pay_now"
+            android:textSize="@dimen/text_34"
+            android:textColor="@color/black"
+            android:fontFamily="@font/lato"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/margin_48"/>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_88"
+            android:gravity="center_horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/please_pay_to_customer"
+                android:textSize="@dimen/text_24"
+                android:textColor="@color/colorAppBlue"
+                android:fontFamily="@font/lato" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$ 0.0"
+                android:textSize="@dimen/text_34"
+                android:textColor="@color/colorAppBlue"
+                android:textStyle="bold"
+                android:fontFamily="@font/lato"
+                android:layout_marginTop="@dimen/margin_8" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_48"
+            android:gravity="center_horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_24"
+                android:textColor="@color/colorAppBlue"
+                android:fontFamily="@font/lato"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_24"
+                android:textColor="@color/colorAppBlue"
+                android:fontFamily="@font/lato"
+                android:layout_marginTop="@dimen/margin_8" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClose"
+            style="@style/DisabledButtonStyle2"
+            android:text="@string/close"
+            android:fontFamily="@font/lato"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:foreground="?attr/selectableItemBackground"
+            android:textSize="@dimen/text_18"
+            android:layout_marginTop="@dimen/margin_88" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

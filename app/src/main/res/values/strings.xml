@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">ScanNPlay</string>
+    <string name="check_internet_connection">Check internet connection</string>
+    <string name="some_technical_issue_occurred">Some technical issue occurred</string>
+    <string name="unable_to_fetch_status">Unable to fetch status</string>
+    <string name="unable_to_fetch_information">Unable to fetch information</string>
+    <string name="please_enter_username">Please enter username</string>
+    <string name="please_enter_password">Please enter password</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="deposit">Deposit</string>
+    <string name="withdrawal">Withdrawal</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="print">Print</string>
+    <string name="powered_by_string"><u>Powered by <b>Infinity</b></u></string>
+    <string name="amount">Amount</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="internal_issue_occurred_please_try_again">Internal issue occurred! Please try again</string>
+    <string name="retail_store_text">Retail Store</string>
+    <string name="retail_store_id">ID : 93847637</string>
+    <string name="close">Close</string>
+    <string name="please_pay_to_customer">Please Pay to Customer</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="please_enter_amount">Please enter amount</string>
+    <string name="please_enter_valid_amount">Please enter valid amount</string>
+    <string name="printing">Printing</string>
+    <string name="are_you_sure_you_want_to_logout">Are you sure you want to logout ?</string>
+    <string name="logout">Logout</string>
+    <string name="unble_to_print_receipt_please_try_again">Unable to print receipt, Please try again</string>
+    <string name="receipt_printed_successfully">Receipt printed successfully</string>
+    <string name="approve">Approve</string>
+</resources>

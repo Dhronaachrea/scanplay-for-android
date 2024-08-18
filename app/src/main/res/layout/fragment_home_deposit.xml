@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/margin_36"
+    tools:context=".home.fragment.HomeDepositFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_amount"
+        app:fontFamily="@font/lato"
+        android:textColor="@color/navyAppBlue"
+        android:textSize="@dimen/text_28"
+        android:layout_gravity="center"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/margin_24"
+                android:layout_marginEnd="@dimen/margin_24">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvRetailerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fontFamily="@font/lato_bold"
+                    android:textColor="@color/colorAppBlue"
+                    android:textSize="@dimen/text_24"
+                    android:text="@string/retail_store_text"
+                    android:layout_marginTop="@dimen/margin_36"
+                    android:layout_gravity="start"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvRetailerId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fontFamily="@font/lato"
+                    android:textColor="@color/navyAppBlue"
+                    android:textSize="@dimen/text_18"
+                    android:text="@string/retail_store_id"
+                    android:layout_gravity="start"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:textColorHint="@color/brownishAppGrey"
+                    app:boxBackgroundMode="none"
+                    app:hintTextColor="@color/brownishAppGrey">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tieAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/amount"
+                        android:inputType="number"
+                        android:textColor="@color/colorAppBlue"
+                        android:textCursorDrawable="@drawable/edittext_cursor"
+                        android:textSize="@dimen/text_28"
+                        android:maxLength="6"
+                        android:theme="@style/EditTextTheme"
+                        app:fontFamily="@font/lato" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_48"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <!--<com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPrint"
+                    style="@style/EnabledButtonStyle3"
+                    android:text="@string/print"
+                    app:fontFamily="@font/lato"
+                    android:textAllCaps="true"
+                    android:layout_gravity="center"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:textSize="@dimen/text_16"/>-->
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPrint"
+                    style="@style/EnabledButtonStyle3"
+                    android:text="Go"
+                    app:fontFamily="@font/lato"
+                    android:textAllCaps="true"
+                    android:layout_gravity="center"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:textSize="@dimen/text_16"/>
+
+                <ProgressBar
+                    android:id="@+id/pbPrint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="52dp"
+                    android:indeterminateDrawable="@drawable/progress_login"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llPrinting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvPrinting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/printing"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/lato"
+                        android:textColor="@color/navyAppBlue"
+                        android:textSize="@dimen/text_16" />
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/loadingLottie"
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        app:lottie_autoPlay="true"
+                        android:layout_gravity="center"
+                        app:lottie_rawRes="@raw/printer"
+                        app:lottie_loop="true" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

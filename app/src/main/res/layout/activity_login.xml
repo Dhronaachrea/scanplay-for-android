@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".login.activity.LoginActivity">
+
+    <FrameLayout
+        android:id="@+id/flHeader"
+        android:layout_width="match_parent"
+        android:layout_height="130dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivHeader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="-5dp"
+            android:layout_marginEnd="-5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/top_header_bg" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_34"
+                app:fontFamily="@font/lato"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </FrameLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llEditText"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilUsername"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_16"
+                android:textColorHint="@color/brownishAppGrey"
+                app:boxBackgroundMode="none"
+                app:hintTextColor="@color/brownishAppGrey">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tieUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/username"
+                    android:inputType="text"
+                    android:textColor="@color/colorAppBlue"
+                    android:textCursorDrawable="@drawable/edittext_cursor"
+                    android:textSize="@dimen/text_18"
+                    android:theme="@style/EditTextTheme"
+                    app:fontFamily="@font/lato" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_16"
+                android:textColorHint="@color/brownishAppGrey"
+                app:boxBackgroundMode="none"
+                app:hintTextColor="@color/brownishAppGrey"
+                app:passwordToggleDrawable="@drawable/show_password_selector"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/brownishAppGrey">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorAppBlue"
+                    android:textCursorDrawable="@drawable/edittext_cursor"
+                    android:textSize="@dimen/text_18"
+                    android:theme="@style/EditTextTheme"
+                    app:fontFamily="@font/lato" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnForgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/dimen_14"
+                android:background="@drawable/button0_bg"
+                android:gravity="center"
+                android:paddingStart="@dimen/dimen_14"
+                android:paddingEnd="@dimen/dimen_14"
+                android:text="@string/forgot_password"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAppBlue"
+                android:textSize="14sp"
+                app:fontFamily="@font/lato" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_48"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLogin"
+                    style="@style/EnabledButtonStyle2"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:text="@string/login"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/text_16"
+                    app:fontFamily="@font/lato" />
+
+                <ProgressBar
+                    android:id="@+id/pbLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="52dp"
+                    android:indeterminateDrawable="@drawable/progress_login"
+                    android:visibility="visible" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="11" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
